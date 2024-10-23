@@ -1,0 +1,74 @@
+h1{
+ text-align: center;
+ color: red;
+ text-decoration: underline;
+	
+}
+marquee.a{
+ text-align: center;
+ background: yellow;
+ text-transform: overline ;
+ font-size: 20px;
+ color: red;
+}
+marquee.b{
+ text-decoration: overline;
+  text-align: left;
+ background: ;
+}
+img{
+ height: 300px;
+ width: 700px;
+}
+p.a{
+ display: block;
+ background-color:Tomato;
+ font-family: monospace;
+ font-size: 15px; 
+}
+table.a,th,td{
+ border: 2px solid;
+ padding: 12px
+}
+table{
+ width: 100%;
+}
+p.b{
+ font-size: 25px;
+ color: blue; 
+}
+p.c{
+ background: MediumSeaGreen;
+}
+table.b,th,td{
+ border: 2px solid;
+ padding: 12px
+ color: green;
+}
+h2{
+background: lightblue;
+color:tomato;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
