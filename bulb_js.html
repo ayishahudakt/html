@@ -1,0 +1,21 @@
+<html>
+<head>
+    
+    <title>Bulb On/Off</title>
+</head>
+<body>
+    <h3>Click to turn the bulb on/off</h3>
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" alt="Bulb">
+    <button onclick="toggleBulb()">SWITCH</button>
+
+    <script>
+        function toggleBulb() {
+            const bulb = document.getElementById('bulb');
+            bulb.src = bulb.src.includes('bulboff') 
+                ? 'https://www.w3schools.com/js/pic_bulbon.gif' 
+                : 'https://www.w3schools.com/js/pic_bulboff.gif';
+        }
+    </script>
+</body>
+</html>
+

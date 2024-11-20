@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Simple Color Change</title>
+
+</head>
+<body>
+
+    <button id="colorButton">Click Me</button>
+
+   
+
+</body>
+ <script>
+        
+        const colorButton = document.getElementById("colorButton");
+
+        
+        colorButton.onclick = function() {
+            document.body.style.backgroundColor = "red";
+        };
+
+       
+        colorButton.ondblclick = function() {
+            document.body.style.backgroundColor = "green";
+        };
+    </script>
+</html>
