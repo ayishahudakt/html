@@ -1,0 +1,169 @@
+<html>
+<head>
+	<title>Registration form</title>
+	<script>
+		// JavaScript function to validate the form fields
+		function validateForm() {
+			// Get values of name and mobile number fields
+			var name = document.getElementById("name").value;
+			var lname = document.getElementById("lname").value;
+			var mobile = document.getElementById("mobile").value;
+			var errorMessage = "";
+			
+			// Name validation
+			var nameRegex = /^[A-Za-z\s]+$/;  // Allow only alphabets and spaces
+			if (!name || !nameRegex.test(name)) {
+				errorMessage += "First Name should only contain letters and spaces. \n";
+			}
+
+			// Last name validation
+			if (!lname || !nameRegex.test(lname)) {
+				errorMessage += "Last Name should only contain letters and spaces. \n";
+			}
+
+			// Mobile number validation
+			var mobileRegex = /^[0-9]{10}$/; // Ensure mobile number is exactly 10 digits
+			if (!mobile || !mobileRegex.test(mobile)) {
+				errorMessage += "Please enter a valid 10-digit mobile number. \n";
+			}
+			// If there is any validation error, display it and prevent form submission
+			if (errorMessage) {
+				alert(errorMessage);
+				return false;  // Prevent form submission
+			}
+
+			// If no errors, show success message
+			alert("Form submitted successfully!");
+			return true;  // Allow form submission
+		}
+	</script>
+</head>
+<body>
+	<h1> STUDENT REGISTRATION FORM </h1>
+	<form onsubmit="return validateForm()">
+		<table border="1" style="width: 100%;">
+			<tr>
+				<td><label for="name">FIRSTNAME:</label></td>
+				<td><input type="text" id="name" /></td>
+			</tr>
+			<tr>
+				<td><label for="lname">LASTNAME:</label></td>
+				<td><input type="text" id="lname" /></td>
+			</tr>
+			<tr>
+				<td><label for="mail">EMAIL ID:</label></td>
+				<td><input type="email" id="mail"></td>
+			</tr>
+			<tr>
+				<td><label for="dob">DOB:</label></td>
+				<td><input type="date" id="dob"></td>
+			</tr>
+			<tr>
+				<td><label for="mobile">MOBILE NUMBER:</label></td>
+				<td><input type="number" id="mobile" min="1000000000" max="9999999999"></td>
+			</tr>
+			<tr>
+				<td><label for="gender">GENDER:</label></td>
+				<td>
+					<input type="radio" id="gender_male" name="gender" value="Male"><label> Male </label>
+					<input type="radio" id="gender_female" name="gender" value="Female"><label> Female </label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="address">ADDRESS:</label></td>
+				<td><textarea rows="4" cols="35"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="city">CITY:</label></td>
+				<td><input type="text" id="city" maxlength="30"></td>
+			</tr>
+			<tr>
+				<td><label for="pin">PINCODE:</label></td>
+				<td><input type="number" id="pin" maxlength="6"></td>
+			</tr>
+			<tr>
+				<td><label for="state">STATE:</label></td>
+				<td><input type="text" id="state"></td>
+			</tr>
+			<tr>
+				<td><label for="country">COUNTRY:</label></td>
+				<td><input type="text" id="country"></td>
+			</tr>
+			<tr>
+				<td><label for="hobbies">HOBBIES:</label></td>
+				<td>
+					<input type="checkbox" id="hobbies_dancing" name="hobbies"> <label> Dancing </label>
+					<input type="checkbox" id="hobbies_singing" name="hobbies"> <label> Singing </label>
+					<input type="checkbox" id="hobbies_painting" name="hobbies"> <label> Painting </label>
+					<input type="checkbox" id="hobbies_other" name="hobbies"> <label> Other <input type="text"></label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="qualfication">QUALIFICATION:</label></td>
+				<td>
+					<table border="1">
+						<tr>
+							<th>SL.NO</th>
+							<th>Examination</th>
+							<th>Board</th>
+							<th>Percentage</th>
+							<th>Year of Passing</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Class X</td>
+							<td>Karnataka</td>
+							<td>98</td>
+							<td>2016</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Class XII</td>
+							<td>Karnataka</td>
+							<td>90</td>
+							<td>2018</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Degree</td>
+							<td>Delhi</td>
+							<td>85</td>
+							<td>2021</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Master's</td>
+							<td>IIT</td>
+							<td>80</td>
+							<td>2023</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="course">COURSE FOR APPLIED:</label></td>
+				<td>
+					<input type="radio" id="course_mca" name="course" value="MCA"><label> MCA </label>
+					<input type="radio" id="course_mtech" name="course" value="M.Tech"><label> M.Tech </label>
+					<input type="radio" id="course_msc" name="course" value="MSc"><label> MSc </label>
+					<input type="radio" id="course_phd" name="course" value="Ph.D"><label> Ph.D</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="pass">PASSWORD:</label></td>
+				<td><input type="password" id="pass" maxlength="30"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<center>
+						<input type="submit" value="SUBMIT">
+						<input type="reset" value="RESET">
+					</center>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
