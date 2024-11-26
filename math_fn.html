@@ -1,0 +1,80 @@
+ <html>
+<head>
+    <title>JavaScript String and Math Functions</title>
+</head>
+<body>
+
+    <h1>String and Math Functions Example</h1>
+
+    <h2>String Functions</h2>
+    <p id="string0"></p>
+    <p id="string1"></p>
+    <p id="string2"></p>
+    <p id="string3"></p>
+    <p id="string4"></p>
+    <p id="string5"></p>
+
+    <h2>Math Functions</h2>
+    <p id="math0"></p>
+    <p id="math1"></p>
+    <p id="math2"></p>
+    <p id="math3"></p>
+    <p id="math4"></p>
+    <p id="math5"></p>
+
+    <script>
+        // String Functions Example
+        let str = " Hello, World! ";
+	// 1. Trim spaces from both ends of the string
+        let trimmedStr = str.trim();
+
+        // 2. Replace part of the string
+        let replacedStr = str.replace("World", "JavaScript");
+
+        // 3. Check if the string contains a word
+        let includesWord = str.includes("World");
+
+        // 4. Convert the string to lowercase
+        let lowerStr = str.toLowerCase();
+
+        // 5. Get a substring (characters from index 0 to 5)
+        let substr = str.substring(0, 5);
+
+        // Displaying string results
+	document.getElementById("string0").innerHTML = " String is : '" + str + "'";
+        document.getElementById("string1").innerHTML = "Trimmed String: '" + trimmedStr + "'";
+        document.getElementById("string2").innerHTML = "Replaced String: '" + replacedStr + "'";
+        document.getElementById("string3").innerHTML = "Contains 'World': " + includesWord;
+        document.getElementById("string4").innerHTML = "Lowercase String: '" + lowerStr + "'";
+        document.getElementById("string5").innerHTML = "Substring (0-5): '" + substr + "'";
+
+        // Math Functions Example 
+        let num = 25;
+
+         //  Find the square root of a number 
+        let sqrtResult = Math.sqrt(num);
+
+        //  Generate a random number between 0 and 1 
+        let randomNumber = Math.random();
+
+        //  Round a number to the nearest integer 
+        let roundedNum = Math.round(9.6);
+
+        //  Find the maximum number from a list of numbers 
+        let maxNum = Math.max(1, 2, 3, 50, 100, 245);
+
+        //  Find the minimum number from a list of numbers 
+        let minNum = Math.min(1, 2, 3, 50, 100, 245);
+
+        // Displaying math results
+	document.getElementById("math0").innerHTML = "Number is: " + num;
+        document.getElementById("math1").innerHTML = "Square Root of 25: " + sqrtResult;
+        document.getElementById("math2").innerHTML = "Random Number: " + randomNumber;
+        document.getElementById("math3").innerHTML = "Rounded Number (9.6): " + roundedNum;
+        document.getElementById("math4").innerHTML = "Maximum Number (1, 2, 3, 50, 100, 245) : " + maxNum;
+        document.getElementById("math5").innerHTML = "Minimum Number (1, 2, 3, 50, 100, 245) : " + minNum;
+
+    </script>
+
+</body>
+</html>
