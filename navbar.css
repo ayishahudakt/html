@@ -1,0 +1,44 @@
+body{
+	margin:0px;
+}
+
+.sidenav li{
+	
+	list-style-type:none;
+}
+
+.sidenav li a{
+	display:block;
+	padding:6px 8px 6px 16px;
+	color:white;
+	text-decoration:none;
+	cursor:pointer;
+}
+.sidenav li a:hover{
+	color:red;
+}
+
+
+.sidenav{
+	height:100%;
+	width:200px;
+	padding-top:20px;
+	background-color:Green;
+	position: fixed;
+    	top: 0;
+    	left: 0;
+	
+	
+}
+
+.maindiv{
+	border:3px solid black;
+	margin-left:220px;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	padding-right:15px;
+	padding-left:10px;
+	height:2000px;
+
+}
