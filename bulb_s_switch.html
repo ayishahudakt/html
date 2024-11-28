@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Light Bulb</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        #lightBulb {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Light Bulb</h1>
+    <img id="lightBulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light Bulb">
+
+    <div class="button-container">
+        <button id="turnOnBtn">Turn On</button>
+        <button id="turnOffBtn">Turn Off</button>
+    </div>
+
+    <script>
+        const lightBulb = document.getElementById("lightBulb");
+        const turnOnBtn = document.getElementById("turnOnBtn");
+        const turnOffBtn = document.getElementById("turnOffBtn");
+
+        // Function to turn on the light
+        function turnOnLight() {
+            lightBulb.src = "https://www.w3schools.com/js/pic_bulbon.gif"; // Light on image
+        }
+
+        // Function to turn off the light
+        function turnOffLight() {
+            lightBulb.src = "https://www.w3schools.com/js/pic_bulboff.gif"; // Light off image
+        }
+
+        // Add event listeners to buttons
+        turnOnBtn.addEventListener("click", turnOnLight);
+        turnOffBtn.addEventListener("click", turnOffLight);
+    </script>
+
+</body>
+</html>
+
