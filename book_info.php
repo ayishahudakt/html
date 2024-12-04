@@ -75,7 +75,7 @@
         echo "<tr><th>Book No</th><th>Title</th><th>Edition</th><th>Publisher</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) 
         {
-            echo "<tr><td>{$row['book_no']}</td><td>{$row['title']}</td><td>{$row['edition']}</td><td>{$r
+            echo "<tr><td>{$row['book_no']}</td><td>{$row['title']}</td><td>{$row['edition']}</td><td>{$row
             ['publisher']}</td></tr>";
         }
             echo "</table>";
