@@ -1,27 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Simple Color Change</title>
-
 </head>
 <body>
-
     <button id="colorButton">Click Me</button>
-
-   
-
 </body>
- <script>
-        
-        const colorButton = document.getElementById("colorButton");
+<script>
+    const colorButton = document.getElementById("colorButton");
+    const body= document.body;
 
-        
-        colorButton.onclick = function() {
-            document.body.style.backgroundColor = "red";
-        };
+    // Single click changes background color to red
+    colorButton.addEventListener("click", function() {
+        body.style.backgroundColor = "red";
+    });
 
-       
-        colorButton.ondblclick = function() {
-            document.body.style.backgroundColor = "green";
-        };
-    </script>
+    // Double click changes background color to green
+    colorButton.addEventListener("dblclick", function() {
+        body.style.backgroundColor = "green";
+    });
+</script>
 </html>
