@@ -26,6 +26,13 @@
 			if (!mobile || !mobileRegex.test(mobile)) {
 				errorMessage += "Please enter a valid 10-digit mobile number. \n";
 			}
+
+			 // Email validation
+        		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+        		if (!email || !emailRegex.test(email)) {
+            			errorMessage += "Please enter a valid email address. \n";
+       			}
+
 			// If there is any validation error, display it and prevent form submission
 			if (errorMessage) {
 				alert(errorMessage);
