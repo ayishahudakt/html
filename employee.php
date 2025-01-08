@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Book Details</title>
+<title>Employee Details</title>
 </head>
 <body>
 <form method="post" action="<?php echo
@@ -47,14 +47,14 @@ echo "Table created successfully.<br>";
 echo "Error creating table: " . mysqli_error($conn) . "<br>";
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$book_no = $_POST["emp_id"];
-$title = $_POST["emp_name"];
-$edition = $_POST["designation"];
-$publisher = $_POST["salary"];
+$emp_id = $_POST["emp_id"];
+$emp_name = $_POST["emp_name"];
+$designation = $_POST["designation"];
+$salary = $_POST["salary"];
 $sql_insert = "INSERT INTO emp_details (emp_id, emp_name, designation, salary) VALUES
 ('$book_no', '$title', '$edition', '$publisher')";
 if (mysqli_query($conn, $sql_insert)) {
-echo "Book information added successfully.";
+echo "EMployee information added successfully.";
 } else {
 echo "Error: " . $sql_insert . "<br>" . mysqli_error($conn);
 }
